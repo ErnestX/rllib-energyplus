@@ -14,8 +14,7 @@ restart terminal
 Create new environmental variable PYTHONPATH with value C:\EnergyPlusV9-4-0 (this is the folder in my case)
 
 make output folder in directory
-python run.py --idf model.idf --epw LUX_LU_Luxembourg.AP.065900_TMYx.2004-2018.epw --output output
-python run.py --idf TT_03-26_Test.idf --epw USA_MA_Boston-Logan.Intl.AP.725090_TMY3.epw --output output
+python run.py --idf models/TT_03-26_Test.idf --epw weatherFiles/USA_MA_Boston-Logan.Intl.AP.725090_TMY3.epw --output outputs
 
 if error about libiomp5md.dll, goto: 
 C:\Users\Carbon\anaconda3\envs\rllib\Library\bin 
