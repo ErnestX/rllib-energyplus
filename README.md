@@ -1,3 +1,27 @@
+conda create -n rllib python=3.10
+conda activate rllib
+conda install ray-rllib=2.3.0
+conda install gymnasium
+conda install numpy=1.23.5
+conda install pip
+pip install energyplus
+pip install tensorflow==2.9.0
+pip install tensorflow-probability==0.14.1
+(pip install torch==1.12.1)
+
+restart terminal
+
+Create new environmental variable PYTHONPATH with value C:\EnergyPlusV9-4-0 (this is the folder in my case)
+
+make output folder in directory
+python run.py --idf model.idf --epw LUX_LU_Luxembourg.AP.065900_TMYx.2004-2018.epw --output output
+python run.py --idf TT_03-26_Test.idf --epw USA_MA_Boston-Logan.Intl.AP.725090_TMY3.epw --output output
+
+if error about libiomp5md.dll, goto: 
+C:\Users\Carbon\anaconda3\envs\rllib\Library\bin 
+and remove libiomp5md.dll
+
+
 # Ray RLlib - EnergyPlus Python API sample
 
 An example of how to train a control policy using Ray RLlib and EnergyPlus Python API.
