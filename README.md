@@ -1,3 +1,4 @@
+```shell
 conda create -n rllib python=3.10
 conda activate rllib
 conda install ray-rllib=2.3.0
@@ -7,14 +8,16 @@ conda install pip
 pip install energyplus
 pip install tensorflow==2.9.0
 pip install tensorflow-probability==0.14.1
-(pip install torch==1.12.1)
+```
 
 restart terminal
 
 Create new environmental variable PYTHONPATH with value C:\EnergyPlusV9-4-0 (this is the folder in my case)
 
-make output folder in directory
+make outputs folder in directory
+```shell
 python run.py --idf models/TT_03-26_Test.idf --epw weatherFiles/USA_MA_Boston-Logan.Intl.AP.725090_TMY3.epw --output outputs
+```
 
 if error about libiomp5md.dll, goto: 
 C:\Users\Carbon\anaconda3\envs\rllib\Library\bin 
